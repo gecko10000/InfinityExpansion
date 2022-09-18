@@ -135,7 +135,7 @@ public final class Quarries {
         }
 
         if (section.getBoolean("netherite")) {
-            outputs.add(Material.NETHERITE_INGOT);
+            outputs.add(Material.ANCIENT_DEBRIS);
         }
 
         if (section.getBoolean("netherrack")) {
