@@ -112,7 +112,7 @@ public final class Quarry extends AbstractMachineBlock implements RecipeDisplayI
             if (oscillator == null || ThreadLocalRandom.current().nextDouble() >= oscillator.chance) {
                 Material outputType = this.outputs[ThreadLocalRandom.current().nextInt(this.outputs.length)];
                 if (!ALLOW_NETHER_IN_OVERWORLD && b.getWorld().getEnvironment() != World.Environment.NETHER &&
-                        (outputType == Material.QUARTZ || outputType == Material.NETHERITE_INGOT || outputType == Material.NETHERRACK)
+                        (outputType == Material.QUARTZ || outputType == Material.ANCIENT_DEBRIS || outputType == Material.NETHERRACK)
                 ) {
                     outputItem = new ItemStack(Material.COBBLESTONE, this.speed);
                 }
