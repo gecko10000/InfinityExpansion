@@ -13,6 +13,7 @@ import lombok.experimental.UtilityClass;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.block.data.Waterlogged;
@@ -26,6 +27,14 @@ import me.mrCookieSlime.Slimefun.api.BlockStorage;
 
 @UtilityClass
 public final class Util {
+
+    public static ItemStack noCraftBarrier() {
+        ItemStack item = new ItemStack(Material.BARRIER);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', "&cThis item is not craftable."));
+        item.setItemMeta(meta);
+        return item;
+    }
 
     @Nonnull
     public static ItemStack getDisplayItem(@Nonnull ItemStack output) {

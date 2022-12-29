@@ -9,6 +9,8 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.core.attributes.NotPlaceable;
 import io.github.thebusybiscuit.slimefun4.core.attributes.Soulbound;
 
+import static io.github.mooy1.infinityexpansion.utils.Util.noCraftBarrier;
+
 /**
  * tools
  *
@@ -17,7 +19,14 @@ import io.github.thebusybiscuit.slimefun4.core.attributes.Soulbound;
 public final class InfinityTool extends SlimefunItem implements Soulbound, NotPlaceable {
 
     public InfinityTool(SlimefunItemStack stack, ItemStack[] recipe) {
-        super(Groups.INFINITY_CHEAT, stack, InfinityWorkbench.TYPE, recipe);
+        super(Groups.INFINITY_CHEAT, stack, InfinityWorkbench.TYPE, new ItemStack[]{
+                noCraftBarrier(), null, null, null, null, null,
+                null, null, null, null, null, null,
+                null, null, null, null, null, null,
+                null, null, null, null, null, null,
+                null, null, null, null, null, null,
+                null, null, null, null, null, null
+        });
     }
 
 }

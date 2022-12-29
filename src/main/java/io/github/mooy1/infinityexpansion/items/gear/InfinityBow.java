@@ -20,11 +20,20 @@ import io.github.thebusybiscuit.slimefun4.core.handlers.BowShootHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.implementation.items.weapons.ExplosiveBow;
 
+import static io.github.mooy1.infinityexpansion.utils.Util.noCraftBarrier;
+
 public final class InfinityBow extends ExplosiveBow implements NotPlaceable, Soulbound {
 
     @ParametersAreNonnullByDefault
     public InfinityBow(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
-        super(itemGroup, item, recipe);
+        super(itemGroup, item, new ItemStack[]{
+                noCraftBarrier(), null, null, null, null, null,
+                null, null, null, null, null, null,
+                null, null, null, null, null, null,
+                null, null, null, null, null, null,
+                null, null, null, null, null, null,
+                null, null, null, null, null, null
+        });
         setRecipeType(recipeType);
     }
 
